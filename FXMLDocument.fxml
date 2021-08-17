@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="creditcardfxml.FXMLDocumentController">
+    <children>
+        <Label fx:id="Heading" layoutX="200.0" layoutY="20.0" text="Credit Card Validator" style="-fx-font-weight: bold">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <AnchorPane    prefHeight="-1.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="90.0">
+            <children >
+                <Text layoutX="5.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Name:" />
+                <Text layoutX="5.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiry Date:" />
+                <Text layoutX="5.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVV:" />
+                <TextField fx:id="txtCardNumber" layoutX="140.0" layoutY="15.0"  prefWidth="430" onKeyReleased="#CardNumberChange" />
+                <TextField fx:id="txtExpiryDate" layoutX="100.0" layoutY="75.0"  prefWidth="200"  onMouseExited="#ExpiryDateChange"/>
+                <TextField fx:id="txtCVV" layoutX="100.0" layoutY="115.0"  prefWidth="200" onMouseExited="#CVVChange"/>
+                <Text fx:id="validExpiryDate" layoutX="250.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0"  />
+                <Text  fx:id="validCVV"  layoutX="250.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0"  />
+                
+               <ImageView
+                    fx:id="imageView"
+                    fitHeight="30.0"
+                    fitWidth="30.0"
+                    layoutX="100.0"
+                    layoutY="15.0"
+                    pickOnBounds="true"
+                    preserveRatio="true">
+                  
+                </ImageView>
+                
+                 <ImageView
+                    fx:id="rightImageView"
+                    fitHeight="30.0"
+                    fitWidth="30.0"
+                    layoutX="540.0"
+                    layoutY="15.0"
+                    pickOnBounds="true"
+                    preserveRatio="true">
+                  
+                </ImageView>
+
+            </children>
+                    
+        </AnchorPane>
+    </children>
+</AnchorPane>
